@@ -1,0 +1,32 @@
+       Thirdtask-Algorithm
+---------------------------------------
+
+
+1. Import the necessary classes:
+   
+2. Define the `EmailValidator` class with a `main` method and a static method `isValidEmail` for email validation.
+
+3. Inside the `main` method:
+   - Create a `Scanner` object to read user input.
+   - Prompt the user to enter an email address.
+   - Read the input email.
+   - Close the `Scanner` object.
+
+4. Call the `isValidEmail` method with the provided email  argument.
+
+5. The `isValidEmail` method:
+   - Defines a regular expression `regex` for email validation.
+   - Compiles the regular expression pattern using `Pattern.compile`.
+   - Creates a `Matcher` object with the input email and the compiled pattern.
+   - Uses the `matcher.matches()` method to check if the entire input email matches the pattern.
+   - Returns `true` if the email is valid according to the pattern, otherwise returns `false`.
+
+6. Finally, based on the result of `isValidEmail`, the program prints "Valid" or "Invalid" to the console.
+
+7.The regular expression `^[a-zA-Z][a-zA-Z0-9_]*@[a-zA-Z0-9]+(\\.[a-zA-Z0-9]+)+$` checks for the following:
+   - The email must start with a letter (a-zA-Z).
+   - After the first letter, it can contain letters, digits, and underscores.
+   - There must be an "@" symbol.
+   - After the "@" symbol, there must be at least one letter or digit.
+   - There can be one or more groups of a period followed by letters/digits.
+

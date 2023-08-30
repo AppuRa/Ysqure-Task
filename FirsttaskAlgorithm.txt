@@ -1,0 +1,18 @@
+                Firsttask-Algorithm
+-----------------------------------------------------
+1. Define the `Calculator` interface with a method signature for calculating the power of two numbers. The method can throw a custom `NegativeNumberException`.
+
+2. Define the `NegativeNumberException` class, which extends the `Exception` class. This class is used to represent exceptions related to negative numbers.
+
+3. Define the `PowerCalculator` class, which implements the `Calculator` interface:
+   - Override the `power` method from the interface.
+   - Check if either of the input numbers `a` or `b` is negative. If so, throw a `NegativeNumberException` with an appropriate error message.
+   - Calculate the result using the `Math.pow` function.
+   - Round the result to one decimal place using `Math.round` and return the rounded value.
+
+4. Define the `Main` class:
+   - In the `main` method, check if exactly two command-line arguments are provided. If not, print an error message and return.
+   - Convert the provided command-line arguments to `double` values.
+   - Wrap the `PowerCalculator` instance in the `Calculator` interface reference.
+   - Call the `power` method on the calculator object with the provided arguments.
+   - If a `NegativeNumberException` is caught, print the error message associated with it.

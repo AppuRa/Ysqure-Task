@@ -1,0 +1,18 @@
+          Secondtask-Algorithm
+-------------------------------------------------
+
+1.we create import statement for user inputs.
+2.Initialize variables and data structures:
+3.Create a Scanner object to read user input.
+4.Create an empty List to store User objects.
+5.Initialize an int variable userIdCounter with a value of 1 to keep track of user IDs.
+6.Display with three options: Create User, Show Users, and Exit.
+7.If the choice is 1:
+8.enter user details: user name, password, email, account number, and account balance.
+9.Add the User object to the users list.
+10.Increment userIdCounter.
+11.Display a success message.
+12.If the choice is 2:
+13.users list and display information about each user: user ID, user name, email, account number, and account balance.
+14.If the choice is 3:
+15.Display an exit message and return from the main method, terminating the program.
