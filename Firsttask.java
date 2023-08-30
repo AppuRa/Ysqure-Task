@@ -1,7 +1,7 @@
 Exception Handling
 ---------------------------
 
-//create interface 
+import java.util.Scanner;
 interface Calculator {
     double power(double a, double b) throws NegativeNumberException;
 }
@@ -20,25 +20,33 @@ class PowerCalculator implements Calculator {
         }
         
         double result = Math.pow(a, b);
-        return Math.round(result * 10) / 10.0; // Round to one decimal place
+        int iresult=(int)result;
+        return Math.round(iresult ); // Round to one decimal place
     }
 }
 
 public class Firsttask {
 //main method
     public static void main(String[] args) {
+    	double dnum1=0;
+    	
+    	double dnum2=0;
         if (args.length != 2) {
             System.out.println("Please provide two numbers as arguments.");
-            return;
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter the 1st value ");
+             dnum1=sc.nextDouble();
+            System.out.println("Enter the 2st value ");
+             dnum2=sc.nextDouble();
+          
+            
         }
-        
-        double num1 = Double.parseDouble(args[0]);
-        double num2 = Double.parseDouble(args[1]);
-        
-        try {
+       try {
             Calculator calculator = new PowerCalculator();
-            double result = calculator.power(num1, num2);
-            System.out.println("Result: " + result);
+            double result = calculator.power(dnum1, dnum2);
+            int iresult=(int)result;
+            String sresult="POWER("+dnum1+","+dnum2+")="+iresult;
+            System.out.println("Result: " + sresult);
         } catch (NegativeNumberException e) {
             System.out.println("Error: " + e.getMessage());
         }
